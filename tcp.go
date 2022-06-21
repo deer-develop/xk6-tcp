@@ -39,3 +39,7 @@ func (tcp *TCP) Read(conn net.Conn) ([]byte, error) {
 	_, err := conn.Read(buf)
 	return buf, err
 }
+
+func (tcp *TCP) Close(conn net.Conn) error {
+	return conn.Close()
+}
